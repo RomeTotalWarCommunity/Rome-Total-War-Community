@@ -1,7 +1,7 @@
 ![Workshop_header_template](/Workshop_header_template.png)
 # Salt & Stone Resources
 
-![Artacord](images/contributors/artacord.png)
+![Artacord](/images/contributors/artacord.png)
 ## Creator: **Artacord**
 ---
 
