@@ -1,3 +1,4 @@
+![Workshop_header_template](/Workshop_header_template.png)
 # Welcome to Rome Total War Community GitHub
 Welcome! This is the home for Rome: Total War (REMASTERED) modding guides, tools and documentation. Over years in modding experience, this is the place to get you started modding!
 
@@ -12,6 +13,8 @@ Welcome! This is the home for Rome: Total War (REMASTERED) modding guides, tools
 # Documentation
 
 # Guides
+
+* [Krn3ll Guide to add brand new buildings to RTW](/guides/krn3ll_building_guide.md)
 
 # Rome Remastered Github
 
