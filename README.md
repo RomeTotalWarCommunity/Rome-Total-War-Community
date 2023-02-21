@@ -25,4 +25,4 @@ Below you will find the link to the official Rome Remastered Github, which will 
 # Rules
 
 * We welcome pull requests with improvements to the tools or documentation
-
+* You can check this [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) on how to style the `.md` files
