@@ -1,9 +1,10 @@
 ![Workshop_header_template](/Workshop_header_template.png)
-# Krn3ll Guide to add brand new buildings to RTW
 
-![alt text](..\images\contributors\seth_k3rnll.png "Seth Krn3ll")
+![Seth Kr3ll](/images/contributors/seth_k3rnll.png)
 ## Creator: **Seth Krn3ll**
 ---
+
+# Krn3ll Guide to add brand new buildings to RTW
 
 #### Modding area: 
 * Buildings (strategic - battle map)
