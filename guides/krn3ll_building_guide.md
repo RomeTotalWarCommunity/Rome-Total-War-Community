@@ -1,7 +1,7 @@
 ![Workshop_header_template](/Workshop_header_template.png)
 # Krn3ll Guide to add brand new buildings to RTW
 
-![alt text](seth_k3rnll.png "Seth Krn3ll")
+![alt text](..\images\contributors\seth_k3rnll.png "Seth Krn3ll")
 ## Creator: **Seth Krn3ll**
 ---
 

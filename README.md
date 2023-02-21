@@ -4,17 +4,18 @@ Welcome! This is the home for Rome: Total War (REMASTERED) modding guides, tools
 
 # Table Of Contents
 
+* [Rules](#rules)
+* [Rome Remastered Github](#rome-remastered-github)
 * [Documentation](#documentation)
 * [Guides](#guides)
 * [Tools](#tools)
-* [Rome Remastered Github](#rome-remastered-github)
-* [Rules](#rules)
+* [Free Assets](#free-assets)
 
-# Documentation
+# Rules
 
-# Guides
+* We welcome pull requests with improvements to the tools or documentation
+* You can check this [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) on how to style the `.md` files
 
-* [Krn3ll Guide to add brand new buildings to RTW](/guides/krn3ll_building_guide.md)
 
 # Rome Remastered Github
 
@@ -22,7 +23,31 @@ Below you will find the link to the official Rome Remastered Github, which will 
 
 * [Official Total War: Rome Remastered Github](https://github.com/FeralInteractive/romeremastered)
 
-# Rules
+# Documentation
 
-* We welcome pull requests with improvements to the tools or documentation
-* You can check this [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) on how to style the `.md` files
+# Guides
+
+* [Krn3ll Guide to add brand new buildings to RTW](/guides/krn3ll_building_guide.md)
+
+# Tools
+
+The tools folder is full of scripts and tools that can assist modders in creating assets for the game. Click on the item you want more information of.
+
+### Third Party
+
+Below you will find links to third party resources that can help with modding Rome Total War (REMASTERED).
+
+* [IWTE](https://wiki.twcenter.net/index.php?title=IWTE) - Extremely useful tool for any modder.
+  * Create RR Map Mesh & Textures
+  * Covert from .dae to .cas
+  * Bulk decompress Rome Remastered texture directory
+* [Dagovax's Rome Modding Tools & Features](https://github.com/Dagovax/Rome-Total-War-Tools-and-Features) - 3DS-Max scripts & more 
+* [Settlement & Region Name Extractor](https://github.com/zkajo/RTW-Region-Extractor)
+* [Swagger's LOD Generator](https://github.com/iamemc/LOD_Generator) - Blender plugin to generate LODs for models. 
+
+# Free Assets
+
+The free assets folder contains files that can be used freely in projects. Check the sections below and find anything that might be helpful for you. Do not forget to check if any asset you acquire requires any form of credits.
+
+### Campaign Map
+* [Salt & Stone Resources](/assets/campaign_map/stonesalt.md) by Artacord
