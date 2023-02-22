@@ -249,7 +249,7 @@ Crash after loading bar filled when launching campaign. Map.rwm generated
 >```
 >verts_used < MAX_REGION_BORDER_VERTICES Failed
 >too many verts!!!
-```
+>```
 **Solution**<br/>
 map_regions had a region with 'too many vertices', redrawing the border fixes it.
 
@@ -355,7 +355,8 @@ Delete map.rwm
 
 **Problem** *found by* **Kirsi**<br/>
 >```
->Script Error in Q:\Feral\Users\Default\AppData\Local\Mods\Local Mods\Local Mod/data/world/maps/campaign/imperial_campaign/descr_strat.txt, at line 13314, column 83. duplicated character name in this faction```
+>Script Error in Q:\Feral\Users\Default\AppData\Local\Mods\Local Mods\Local Mod/data/world/maps/campaign/imperial_campaign/descr_strat.txt, at line 13314, column 83. duplicated character name in this faction
+>```
 **Solution**<br/>
 Duplicate 'named character' name in Slave faction. 'General' cannot share a name with 'Named_Character'.
 
