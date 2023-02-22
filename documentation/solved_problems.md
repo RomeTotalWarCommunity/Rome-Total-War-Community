@@ -57,6 +57,14 @@ the folder is incorrectly named. The captain banners folder is the only one in t
 
 Simple one but hard to spot.
 
+***
+
+**Problem** *found by* **Lanjane**<br/>
+Game doesn't accept "extras" animations even if correctly referenced in descr_skeleton_feral_overrides.txt
+
+**Solution**<br/>
+The modfoldered skeletons.dat need to contain the skeletons related to those animations, plus pack.dat needs to have "default" versions of those animations
+
 
 ## Campaign Map
 
