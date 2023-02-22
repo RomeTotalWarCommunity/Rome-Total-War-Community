@@ -57,6 +57,14 @@ the folder is incorrectly named. The captain banners folder is the only one in t
 
 Simple one but hard to spot.
 
+***
+
+**Problem** *found by* **Lanjane**<br/>
+Game doesn't accept "extras" animations even if correctly referenced in descr_skeleton_feral_overrides.txt
+
+**Solution**<br/>
+The modfoldered skeletons.dat need to contain the skeletons related to those animations, plus pack.dat needs to have "default" versions of those animations
+
 
 ## Campaign Map
 
@@ -200,10 +208,166 @@ You are getting KTM when trying to launch campaign after you've added new factio
 >Script Error in Q:\Feral\Users\Default\AppData\Local\Mods\My 
 >Mods\Barbarian_Empires/data/world/maps/campaign/imperial_campaign/descr_strat.txt, at line 29928, column 1. Faction baktria listed as present in header, but not supplied.
 >```
-
-
 **Solution**<br/>
 Missing empty line at the end of descr_standards.txt file. To be on safe side, make sure to have an empty line at the end of each file in RR! Engine ignores the last line for some files, so it might ignore your data if you don't provide the empty line.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>Landmass Limit
+>n < N Failed
+>checked array access out of range
+>```
+**Solution**<br/>
+The 'landmass' limit is still in the game; it's 22 landmasses. Where landmass = land that's fully separated by ocean & doesn't have regions that overlap onto other landmasses. Landmasses that are connected by land bridges count as just 1 landmass. And same goes for if you have say an island but put 1 pixel of it's region color anywhere on the mainland. *(That's the way you get around the landmass limit!)*
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>Generating default settlement in region  (189)
+>```
+**Solution**<br/>
+Crash caused by placeholder region #189 being too large (we're talking couple hundred pixels) & having too many 1 pixel islands, solved by splitting it into 2 placeholder regions.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>edge_count <= 3 Failed
+>edge_count <= 3 Failed
+>WORLD_MAP river crossroads are forbidden (too many nasty permutations)
+>```
+**Solution**<br/>
+Crash caused by bad map_features. Accidentally had 4 pixels of river in a square.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+Crash after loading bar filled when launching campaign. Map.rwm generated
+>```
+>verts_used < MAX_REGION_BORDER_VERTICES Failed
+>too many verts!!!
+>```
+**Solution**<br/>
+map_regions had a region with 'too many vertices', redrawing the border fixes it.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>script error "trying to place [settlement] in this region (region name), but it already has a >settlement [settlement]"
+>script error "trying to place [settlement] in this region (region name), but it already has a >settlement [settlement]"
+>```
+**Solution**<br/>
+Problem probably caused by 'something' happening that makes the mentioned region 'too big', solved by reducing the region size. Though, this region worked fine as one of the 10 base regions when map was empty.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+Crash on start new campaign, after "generating trade routes", no map.rwm, no pop up error log. This is crashing right before "Generating regions" should occur.
+>```
+>generating trade routes
+>```
+**Solution**<br/>
+Problem with map_features again, 4x4 pixel bit of river (blue), same problem as the previous one, but resulted in a different message - in this case, no message.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>"unable to get name for region '' from stringtable"
+>```
+**Solution**<br/>
+descr_regions cannot have blank lines at the start of the file before region name
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>Crash on scrolling over on campaign map
+>```
+**Solution**<br/>
+Faction name for culture in descr_region is not listed in descr_strat under playable or non playable, resulting in no factions of that culture present.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>Generating default settlement in region  (189)
+>Generating default settlement in region  (189)
+>type < MAX_FACTIONS Failed
+>you are trying to retrieve an invalid faction
+>index < m_num_records Failed
+>DATABASE_TABLE error found : index out of range.
+>```
+**Solution**<br/>
+Caused by a city with duplicate region color in descr_regions & missing the actual region color for that city.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+Kick back to menu when trying to load campaign, happen after editing coordinates in descr_strat, no useful error message.
+>```
+>BATTLE_ALLIANCE_STATS::clear() setting battle result to none
+>```
+**Solution**<br/>
+Caused by faction's character being assigned to a settlement that is not listed in descr_strat as belonging to that faction. Sometimes doing so causes no error, sometimes this happens.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+Crash on start campaign, does generate map.rwm
+>```
+>attaching region
+>attaching region Bactria(1) to faction(slave), giving them 486 triumph points
+>Created a port attached to settlement 'Patala', faction 'slave'
+>Generating default settlement in region  (10)
+>type < MAX_FACTIONS Failed
+>you are trying to retrieve an invalid faction
+>type < MAX_FACTIONS Failed
+>you are trying to retrieve an invalid faction
+>```
+**Solution**<br/>
+Caused by repeat region color in descr_regions. The region after the one listed last in the log is *supposed to be* the one where the 1st instance of the duplicate color in descr_regions, but it can also just be listing a completely unrelated region!
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>Error loading region: Region label 'Luoyang_R' not found
+>```
+**Solution**<br/>
+Changed internal region name, all appropriate files updated. Problem persisted until deleting map.rwm, even though that shouldn't be required.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>Generic Error:
+>SettlementBuildingExists needs a settlement. ([text])
+>```
+**Solution**<br/>
+Delete map.rwm
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>Script Error in Q:\Feral\Users\Default\AppData\Local\Mods\Local Mods\Local Mod/data/world/maps/campaign/imperial_campaign/descr_strat.txt, at line 13314, column 83. duplicated character name in this faction
+>```
+**Solution**<br/>
+Duplicate 'named character' name in Slave faction. 'General' cannot share a name with 'Named_Character'.
+
+***
+
+**Problem** *found by* **Kirsi**<br/>
+>```
+>descr_strat.txt, at line 6104, column 12. could not create settlement at script line 6104.
+>```
+**Solution**<br/>
+Settlement defined in descr_regions / descr_strat, but region is not drawn on map_regions.tga
 
 ## Modeling and Text Editing
 
