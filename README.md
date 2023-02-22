@@ -44,6 +44,7 @@ Below you will find links to third party resources that can help with modding Ro
 * [Dagovax's Rome Modding Tools & Features](https://github.com/Dagovax/Rome-Total-War-Tools-and-Features) - 3DS-Max scripts & more 
 * [Settlement & Region Name Extractor](https://github.com/zkajo/RTW-Region-Extractor)
 * [Swagger's LOD Generator](https://github.com/iamemc/LOD_Generator) - Blender plugin to generate LODs for models. 
+* [EB Online Public Tools](https://gitlab.com/eb-online/tools) - Public Tools by EB Online
 
 # Free Assets
 
