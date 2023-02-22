@@ -183,9 +183,12 @@ AI is very passive and is not attacking other AI's settlements.
 
 **Solution**<br/>
 Be sure to have the `AI Improvement` toggle set to REMASTERED.
+
 ![AI Improvement Toggle](/images/documentation/ai_improvement_toggle.png)
+
 As modder you can override this toggle state and lock it, so that players can't switch to CLASSIC.
 `toggles\toggle button states.txt`
+
 ![AI Improvement File](/images/documentation/ai_improvement_file.png)
 
 ***
