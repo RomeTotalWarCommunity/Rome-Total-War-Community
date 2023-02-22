@@ -211,6 +211,8 @@ You are getting KTM when trying to launch campaign after you've added new factio
 **Solution**<br/>
 Missing empty line at the end of descr_standards.txt file. To be on safe side, make sure to have an empty line at the end of each file in RR! Engine ignores the last line for some files, so it might ignore your data if you don't provide the empty line.
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 >```
 >Landmass Limit
@@ -220,12 +222,16 @@ Missing empty line at the end of descr_standards.txt file. To be on safe side, m
 **Solution**<br/>
 The 'landmass' limit is still in the game; it's 22 landmasses. Where landmass = land that's fully separated by ocean & doesn't have regions that overlap onto other landmasses. Landmasses that are connected by land bridges count as just 1 landmass. And same goes for if you have say an island but put 1 pixel of it's region color anywhere on the mainland. *(That's the way you get around the landmass limit!)*
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 >```
 >Generating default settlement in region  (189)
 >```
 **Solution**<br/>
 Crash caused by placeholder region #189 being too large (we're talking couple hundred pixels) & having too many 1 pixel islands, solved by splitting it into 2 placeholder regions.
+
+***
 
 **Problem** *found by* **Kirsi**<br/>
 >```
@@ -236,13 +242,18 @@ Crash caused by placeholder region #189 being too large (we're talking couple hu
 **Solution**<br/>
 Crash caused by bad map_features. Accidentally had 4 pixels of river in a square.
 
-```verts
-verts_used < MAX_REGION_BORDER_VERTICES Failed
-too many verts!!!
+***
+
+**Problem** *found by* **Kirsi**<br/>
+Crash after loading bar filled when launching campaign. Map.rwm generated
+>```
+>verts_used < MAX_REGION_BORDER_VERTICES Failed
+>too many verts!!!
 ```
 **Solution**<br/>
-Crashed after loading bar filled when launching campaign. Map.rwm generated
-map_regions had a region with 'too many vertices', redrawing the border a bit fixed it, still not able to pin down what it was.
+map_regions had a region with 'too many vertices', redrawing the border fixes it.
+
+***
 
 **Problem** *found by* **Kirsi**<br/>
 >```
@@ -252,6 +263,8 @@ map_regions had a region with 'too many vertices', redrawing the border a bit fi
 **Solution**<br/>
 Problem probably caused by 'something' happening that makes the mentioned region 'too big', solved by reducing the region size. Though, this region worked fine as one of the 10 base regions when map was empty.
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 Crash on start new campaign, after "generating trade routes", no map.rwm, no pop up error log. This is crashing right before "Generating regions" should occur.
 >```
@@ -260,6 +273,8 @@ Crash on start new campaign, after "generating trade routes", no map.rwm, no pop
 **Solution**<br/>
 Problem with map_features again, 4x4 pixel bit of river (blue), same problem as the previous one, but resulted in a different message - in this case, no message.
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 >```
 >"unable to get name for region '' from stringtable"
@@ -267,12 +282,16 @@ Problem with map_features again, 4x4 pixel bit of river (blue), same problem as 
 **Solution**<br/>
 descr_regions cannot have blank lines at the start of the file before region name
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 >```
 >Crash on scrolling over on campaign map
 >```
 **Solution**<br/>
 Faction name for culture in descr_region is not listed in descr_strat under playable or non playable, resulting in no factions of that culture present.
+
+***
 
 **Problem** *found by* **Kirsi**<br/>
 >```
@@ -286,6 +305,8 @@ Faction name for culture in descr_region is not listed in descr_strat under play
 **Solution**<br/>
 Caused by a city with duplicate region color in descr_regions & missing the actual region color for that city.
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 Kick back to menu when trying to load campaign, happen after editing coordinates in descr_strat, no useful error message.
 >```
@@ -293,6 +314,8 @@ Kick back to menu when trying to load campaign, happen after editing coordinates
 >```
 **Solution**<br/>
 Caused by faction's character being assigned to a settlement that is not listed in descr_strat as belonging to that faction. Sometimes doing so causes no error, sometimes this happens.
+
+***
 
 **Problem** *found by* **Kirsi**<br/>
 Crash on start campaign, does generate map.rwm
@@ -309,12 +332,16 @@ Crash on start campaign, does generate map.rwm
 **Solution**<br/>
 Caused by repeat region color in descr_regions. The region after the one listed last in the log is *supposed to be* the one where the 1st instance of the duplicate color in descr_regions, but it can also just be listing a completely unrelated region!
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 >```
 >Error loading region: Region label 'Luoyang_R' not found
 >```
 **Solution**<br/>
 Changed internal region name, all appropriate files updated. Problem persisted until deleting map.rwm, even though that shouldn't be required.
+
+***
 
 **Problem** *found by* **Kirsi**<br/>
 >```
@@ -324,11 +351,15 @@ Changed internal region name, all appropriate files updated. Problem persisted u
 **Solution**<br/>
 Delete map.rwm
 
+***
+
 **Problem** *found by* **Kirsi**<br/>
 >```
 >Script Error in Q:\Feral\Users\Default\AppData\Local\Mods\Local Mods\Local Mod/data/world/maps/campaign/imperial_campaign/descr_strat.txt, at line 13314, column 83. duplicated character name in this faction```
 **Solution**<br/>
 Duplicate 'named character' name in Slave faction. 'General' cannot share a name with 'Named_Character'.
+
+***
 
 **Problem** *found by* **Kirsi**<br/>
 >```
