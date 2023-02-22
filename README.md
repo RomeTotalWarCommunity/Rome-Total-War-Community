@@ -1,6 +1,6 @@
 ![Workshop_header_template](/Workshop_header_template.png)
 # Welcome to Rome Total War Community GitHub
-Welcome! This is the home for Rome: Total War (REMASTERED) modding guides, tools and documentation. Over years in modding experience, this is the place to get you started modding!
+Welcome! This is the home for Rome: Total War (REMASTERED) modding guides, tools and documentation. Over years in modding experience, this is the place to get you started modding! For online help and technical support, visit [Rome Total War Community Discord](https://discord.com/invite/6Mhnnb5HCT)
 
 # Table Of Contents
 
