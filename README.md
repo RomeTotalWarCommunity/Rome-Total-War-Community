@@ -55,3 +55,6 @@ The free assets folder contains files that can be used freely in projects. Check
 
 ### Campaign Map
 * [Salt & Stone Resources](/assets/campaign_map/stonesalt.md) by Artacord
+
+### Unit models
+* [3D RR model parts](/assets/unit_models/3D_RR_parts.md) by Lyrecryer
