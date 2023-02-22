@@ -42,7 +42,7 @@ The tools folder is full of scripts and tools that can assist modders in creatin
 Below you will find links to third party resources that can help with modding Rome Total War (REMASTERED).
 
 * [RTW Heaven](https://rtw.heavengames.com/rtw/mods/tutorials/modding_faq/) - Rome modding FAQ and articles for beginner modders
-* [TWC Wiki] (https://wiki.twcenter.net/index.php?title=Rome:Total_War_%26_Remastered_-_Modding_Index) - RTW/RR Modding Wiki created by Twcenter modders
+* [TWC Wiki](https://wiki.twcenter.net/index.php?title=Rome:Total_War_%26_Remastered_-_Modding_Index) - RTW/RR Modding Wiki created by Twcenter modders
 * [IWTE](https://wiki.twcenter.net/index.php?title=IWTE) - Extremely useful tool for any modder.
   * Create RR Map Mesh & Textures
   * Covert from .dae to .cas
