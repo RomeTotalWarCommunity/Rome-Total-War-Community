@@ -30,6 +30,7 @@ Below you will find the link to the official Rome Remastered Github, which will 
 # Guides
 
 * [Krn3ll Guide to add brand new buildings to RTW](/guides/krn3ll_building_guide.md)
+* [Adding a completely new faction to Rome: Total War REMASTERED](/guides/dagovax_new_faction_guide.md)
 
 # Tools
 
