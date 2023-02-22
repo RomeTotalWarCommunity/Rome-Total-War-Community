@@ -14,7 +14,7 @@
 * Graphic editor like Photoshop or GIMP
 #### Summary: This tutorial explains how to add totally new buildings to the gameplay, both in strategic and battle map modes.
 
-# Table Of Contents
+## Table Of Contents
 * [Premise](#premise)
 * [Adding Ambient Building to RTW](#ADDING-AMBIENT-BUILDINGS-TO-RTW)
 * [Adding Game Buildings To RTW](#ADDING-GAME-BUILDINGS-TO-RTW)

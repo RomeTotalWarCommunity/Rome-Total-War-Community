@@ -25,6 +25,8 @@ Below you will find the link to the official Rome Remastered Github, which will 
 
 # Documentation
 
+* [Solved Problems](/documentation/solved_problems.md)
+
 # Guides
 
 * [Krn3ll Guide to add brand new buildings to RTW](/guides/krn3ll_building_guide.md)
