@@ -26,7 +26,7 @@ Now we need to add the remaining objects that should be in the scene. In the cas
 I'm doing a cavalry unit so I'm going to set the horse to visible. To do this, I will click the eye icon to the right of the Horses section, then expand it as well as the armatures under it, and in each horse mesh, if I'm not using it I'll also hide, if I am using it I'll click on the camera icon to set it as active when the image is rendered:
 
 
-![imported model](images/2.png)
+![view horse](images/2.png)
 
 So we now have the soldier and horse models, but they don't have the correct textures. We should now go over to the Shading tab.
 For clarity in the next steps, whenever I mention hiding or showing a mesh it means clicking the eye icon for that mesh (like we did earlier for the horse).
@@ -38,18 +38,18 @@ Since the soldier has many textures that need to be applied (head, hair, facial 
 
 Select all the faces of the head (select one and use `Ctrl` + `+` on the numpad to get the rest). Now you need to go over to Material Properties, click Add Material Slot, then New, then rename your material to whatever you want (but you should probably name it something recognizable), and finally click assign:
 
-![imported model](images/3.png)
+![materials](images/3.png)
 
 I will now do the same for the arms, legs, hands and feet. These have a single texture for all of them so I can have them all under the same material. I will then return to Object Mode.
 
 
 Now after selecting Material 0 on the right-hand side of the screen, I'll drag and drop my model's texture to the lower part of the screen and connect it up to Principled BDFS as shown, as well as selecting Clip instead of Extend in one of the texture options. I will also reduce Specular to 0 on Principled BDSF.
 
-![imported model](images/4.png)
+![textures](images/4.png)
 
 Then in the right-hand pannel I will scroll down until i see `Settings > Blend Mode` which I will set to Alpha Clip.
 
-![imported model](images/5.png)
+![textures2](images/5.png)
 
 I will now do the same for the head and arms materials, of course with the correct textures. You can find the skin textures used by the game in `romeremastered-unitcards-main\TWRR_portrait_render_blender\textures\TTWR\characters\body-part\albedo_classic`. The arms and legs texture is combined with the torso texture - you will need to separate them in an image editor to get 2 separate ones.
 
@@ -57,7 +57,7 @@ I will now hide the soldier and show the horse in order to correct the horse's t
 
 This is how the texturing for the horse is set up by default:
 
-![imported model](images/6.png)
+![horse texture](images/6.png)
 
 The first thing to do is to again change Blend Mode to Alpha clip.
 
@@ -65,20 +65,20 @@ Then, we can drag and drop the correct horse texture to replacethe default one. 
 
 You can then use the color box to set the horse to another color - usually some scale of grey or brown, though I guess if you're making a disco mod you can have bright yellow and green horses.
 
-![imported model](images/7.png)
+![horse color](images/7.png)
 
 Now show the soldier again, select its armature, and head over to the Rendering tab.
 Choose Action:unit_poses in the highlighted place in the following image:
 
-![imported model](images/8.png)
+![posing](images/8.png)
 
 You can now use the left and right arrows to scroll through the poses until you find one you like. Then, you can click Render and Render Image to get your unit card.
 
-![imported model](images/9.png)
+![rendering unit](images/9.png)
 
 Save that image. Then expand the Cameras section, and select the full render camera for the info image, and again render the image and save it.
 
-![imported model](images/10.png)
+![rendering info](images/10.png)
 
 You now have your unit and info cards!
 
